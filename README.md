@@ -1,6 +1,6 @@
 # About detoxified-dark
 
-Just another pseudo-responsive theme for Cryogen by [knows-the-cost-of-nothing](https://github.com/knows-the-cost-of-nothing). 
+Just another pseudo-responsive theme for Cryogen by [knows-the-cost-of-nothing](https://github.com/knows-the-cost-of-nothing).
 
 Example page: [irrelevancy universe](https://knows-the-cost-of-nothing.github.io/).
 
@@ -26,3 +26,8 @@ Add/modify following keys in `content/config.edn`:
 2. Add the key `:site-language` (e.g. "en", will be used as HTML lang attribute).
 3. Add the key `:date-output-format` (e.g. "dd/MM/yyyy", see [selmer documentation](https://github.com/yogthos/Selmer#date) for more details).
 4. Add the key `:footer-notice` (e.g. "Copyleft irrelevance", you can use any HTML string here)
+
+## License
+
+Copyleft [knows-the-cost-of-nothing](https://github.com/knows-the-cost-of-nothing).
+Licensed under the GNU General Public License 3.0 (or any later version).
