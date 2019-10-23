@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{site-language}}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>{{title}}{% block subtitle %}{% endblock %}</title>
+        <style>
+         body {
+             font-family: "Segoe UI", Liberation Sans, Helvetica, Arial, sans-serif;
+             line-height: 1.6;
+             color: #EFEFEF;
+             background: #393939;
+             max-width: 75ch;
+             padding: 2ch;
+             margin: auto;
+         }
+         img { max-width: 100%; }
+         a { color: #90EE90; }
+         h1, h2, h3, h4, strong { color: #ABE338; }
+         hr { margin-top: 2rem; }
+        </style>
+    </head>
+    <body>
+        <h1>{{title}}</h1>
+        <em>{{description}}</em>
+        <p>
+            <strong>
+                <a title="Home" href="{{index-uri}}">Home</a> | 
+                <a title="Archives" href="{{archives-uri}}">Archives</a> | 
+                {% if tags|not-empty %}
+                    <a title="Tags" href="{{tags-uri}}">Tags</a> | 
+                {% endif %}
+                {% for nav-page in navbar-pages %}
+                    <a href="{{nav-page.uri}}">{{nav-page.title}}</a> | 
+                {% endfor %}
+                <a title="RSS" href="{{rss-uri}}">RSS</a>
+            </strong>
+        </p>
+        <hr />
+        {% block content %}
+        {% endblock %}
+        <hr/>
+        <div>{{footer-notice|safe}}
+            <p>Powered by <a href="http://cryogenweb.org">Cryogen</a></p>
+        </div>
+    </body>
+</html>

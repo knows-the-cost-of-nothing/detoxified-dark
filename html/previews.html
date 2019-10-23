@@ -1,0 +1,24 @@
+{% extends "/html/base.html" %}
+{% block content %}
+    <h2>Latest posts</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{{post.uri}}">{{post.title}}</a> | 
+                <em>
+                    {% if post.author %}
+                        {{post.author}} | 
+                    {% endif %}
+                    {{post.date|date:"@date-output-format"}}
+                </em>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% if prev-uri %}
+        <a href="{{prev-uri}}">&laquo; Prev</a>
+    {% endif %}
+    {% if next-uri %}
+        <a href="{{next-uri}}">Next &raquo;</a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "/html/base.html" %}
+{% block content %}
+    {% include "/html/post-content.html" %}
+    {% if post.prev %}
+        <a href="{{post.prev.uri}}">&laquo; {{post.prev.title}}</a>
+    {% endif %}
+    {% if post.next %}
+        <a href="{{post.next.uri}}">{{post.next.title}} &raquo;</a>
+    {% endif %}
+{% endblock %}

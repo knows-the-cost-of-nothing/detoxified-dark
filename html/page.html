@@ -1,0 +1,14 @@
+{% extends "/html/base.html" %}
+{%block subtitle %}: {{page.title}}{% endblock %}
+{% block content %}
+    <h2>{{page.title}}</h2>
+    {% if page.toc %}{{page.toc|safe}}{% endif %}
+    {{page.content|safe}}
+
+    {% if page.prev %}
+        <a href="{{page.prev.uri}}">&laquo; {{page.prev.title}}</a>
+    {% endif %}
+    {% if page.next %}
+        <a href="{{page.next.uri}}">{{page.next.title}} &raquo;</a>
+    {% endif %}
+{% endblock %}

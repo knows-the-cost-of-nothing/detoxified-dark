@@ -1,0 +1,12 @@
+{% extends "/html/base.html" %}
+{%block subtitle %}: Posts tagged &quot;{{name}}&quot;{% endblock %}
+{% block content %}
+    <h2>Posts tagged &quot;{{name}}&quot;</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{{post.uri}}">{{post.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

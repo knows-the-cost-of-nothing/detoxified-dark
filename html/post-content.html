@@ -1,0 +1,14 @@
+<h2>{{post.title}}</h2>
+<em>{{post.date|date:"@date-output-format"}}
+    {% if post.author %}
+        | {{post.author}}
+    {% endif %}
+    {% if post.tags|not-empty %}
+        {% for tag in post.tags %}
+            | <a href="{{tag.uri}}">{{tag.name}}</a>
+        {% endfor %}
+    {% endif %}
+</em>
+
+{% if post.toc %}{{post.toc|safe}}{% endif %}
+{{post.content|safe}}
