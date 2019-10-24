@@ -17,7 +17,6 @@ Example page: [irrelevancy universe](https://knows-the-cost-of-nothing.github.io
 * No syntax highlighting (compared to Cryogen default theme) (-> JS)
 * No klipse integration (compared to Cryogen default theme) (-> JS)
 
-
 ## Usage
 
 Add/modify following keys in `content/config.edn`:
