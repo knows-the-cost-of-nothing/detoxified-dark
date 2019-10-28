@@ -2,7 +2,7 @@
 
 Just another pseudo-responsive theme for Cryogen by [knows-the-cost-of-nothing](https://github.com/knows-the-cost-of-nothing).
 
-Example page: [irrelevancy universe](https://knows-the-cost-of-nothing.github.io/).
+Example page: [irrelevancy universe](https://irrelevancy.neocities.org/).
 
 ## (Non-)Features
 
